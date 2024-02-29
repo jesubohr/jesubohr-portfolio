@@ -1,17 +1,17 @@
 ---
-import SunIcon from "./icons/Sun.astro"
-import MoonIcon from "./icons/Moon.astro"
-import SystemIcon from "./icons/System.astro"
+import SunIcon from "@icons/Sun.astro"
+import MoonIcon from "@icons/Moon.astro"
+import SystemIcon from "@icons/System.astro"
 
 const THEMES = ["Light", "Dark", "System"]
 ---
 
-<div class="relative ml-1 mr-1">
+<div class="relative mx-1">
   <button
     id="theme-toggle-btn"
-    class="appearance-none border-none flex hover:scale-125 transition"
+    class="appearance-none flex p-2 border-none hover:text-purple-400 hover:scale-125 transition-transform"
   >
-    <span class="sr-only">Elige el tema</span>
+    <span class="sr-only">Choose a theme</span>
     <SunIcon id="light" class="theme-toggle-icon size-5 transition-all" />
     <MoonIcon
       id="dark"
@@ -24,12 +24,15 @@ const THEMES = ["Light", "Dark", "System"]
   </button>
   <div
     id="themes-menu"
-    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/70 dark:bg-gray-900/70 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute opacity-0 scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-purple-50 dark:bg-neutral-900 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
     <ul>
       {
         THEMES.map((theme) => (
-          <li class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm">
+          <li
+            tabindex="0"
+            class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-purple-300/80 dark:hover:bg-purple-500/70 rounded-sm"
+          >
             {theme}
           </li>
         ))
@@ -56,11 +59,11 @@ const THEMES = ["Light", "Dark", "System"]
 </style>
 
 <script is:inline>
-  let remove = null
   const matchMedia = window.matchMedia("(prefers-color-scheme: dark)")
   const themesMenu = document.getElementById("themes-menu")
+  let remove = null
 
-  const getThemePreference = () => {
+  function getThemePreference() {
     if (typeof localStorage !== "undefined") {
       return localStorage.getItem("theme") ?? "system"
     }
@@ -69,20 +72,16 @@ const THEMES = ["Light", "Dark", "System"]
       : "light"
   }
 
-  const updateIcon = (themePreference) => {
+  function updateIcon(themePreference) {
     document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
       element.style.scale = element.id === themePreference ? "1" : "0"
     })
   }
 
-  const updateTheme = () => {
-    if (remove != null) {
-      remove()
-    }
+  function updateTheme() {
+    if (remove != null) remove()
     matchMedia.addEventListener("change", updateTheme)
-    remove = () => {
-      matchMedia.removeEventListener("change", updateTheme)
-    }
+    remove = () => matchMedia.removeEventListener("change", updateTheme)
 
     const themePreference = getThemePreference()
     const isDark =
@@ -94,19 +93,25 @@ const THEMES = ["Light", "Dark", "System"]
   }
 
   updateTheme()
-
   document.addEventListener("click", () => themesMenu.classList.remove("open"))
 
-  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
-    e.stopPropagation()
-    const isClosed = !themesMenu.classList.contains("open")
-    themesMenu.classList[isClosed ? "add" : "remove"]("open")
-  })
-
+  document
+    .getElementById("theme-toggle-btn")
+    .addEventListener("click", (ev) => {
+      ev.stopPropagation()
+      const isClosed = !themesMenu.classList.contains("open")
+      themesMenu.classList[isClosed ? "add" : "remove"]("open")
+    })
   document.querySelectorAll(".themes-menu-option").forEach((element) => {
-    element.addEventListener("click", (e) => {
-      localStorage.setItem("theme", e.target.innerText.toLowerCase().trim())
+    element.addEventListener("click", (ev) => {
+      localStorage.setItem("theme", ev.target.innerText.toLowerCase().trim())
       updateTheme()
+    })
+    element.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        localStorage.setItem("theme", ev.target.innerText.toLowerCase().trim())
+        updateTheme()
+      }
     })
   })
 </script>
