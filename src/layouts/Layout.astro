@@ -1,115 +1,117 @@
 ---
 import "@fontsource-variable/onest"
-
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
 import { ViewTransitions } from "astro:transitions"
+import Header from "@components/Header.astro"
+import Footer from "@components/Footer.astro"
+import { basics } from "@portfolio"
 
-interface Props {
-  title: string
-  description: string
-}
 
-const { description, title } = Astro.props
+const { name, label } = basics
+const SITE_TITLE = `${name}'s Portfolio`
+const SITE_DESCRIPTION = label
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content={SITE_DESCRIPTION} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{SITE_TITLE}</title>
     <ViewTransitions />
-  </head>
 
+    <!-- Open Graph -->
+    <meta property="og:title" content={SITE_TITLE} />
+    <meta property="og:description" content={SITE_DESCRIPTION} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={SITE_TITLE} />
+    <meta name="twitter:description" content={SITE_DESCRIPTION} />
+    <meta name="twitter:image" content="/og-image.jpg" />
+  </head>
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
-      bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-      dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute inset-y-0 z-[-2] w-full min-h-screen bg-neutral-50 dark:bg-neutral-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#eaceff50,#fffaffe6)] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#6e68d66d,#222222a0)]"
     >
     </div>
     <Header />
     <slot />
     <Footer />
-    <style is:global>
-      :root {
-        color-scheme: light dark;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-
-      body {
-        color: rgba(17, 17, 17, 0.9);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        overscroll-behavior: none;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          color: rgba(255, 255, 255, 0.9);
-        }
-      }
-
-      #header-nav {
-        animation: blur linear both 0.5s;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      @keyframes blur {
-        to {
-          backdrop-filter: blur(20px);
-          border-width: 1px;
-          border-color: rgba(0, 0, 0);
-          padding: 0.25rem 0.75rem;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: rgb(229, 229, 229);
-          border-radius: 9999px;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        @keyframes blur {
-          from {
-            border: 0px;
-          }
-          to {
-            box-shadow:
-              0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-              0px 0px 0 1px rgba(0, 0, 0, 0.3);
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
-            border-width: 1px;
-            border-color: rgba(0, 0, 0);
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 9999px;
-          }
-        }
-      }
-    </style>
   </body>
 </html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overscroll-behavior: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  #header-nav {
+    animation: blur linear both 0.5s;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
+
+  @keyframes blur {
+    to {
+      backdrop-filter: blur(20px);
+      border-width: 1px;
+      border-color: #000;
+      padding: 0.25rem 0.75rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #e5e5e5;
+      border-radius: 9999px;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @keyframes blur {
+      from {
+        border: 0px;
+      }
+      to {
+        box-shadow:
+          0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+          0px 0px 0 1px rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        border-width: 1px;
+        border-color: rgba(0, 0, 0);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 9999px;
+      }
+    }
+  }
+</style>
