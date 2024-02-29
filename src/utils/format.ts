@@ -5,6 +5,9 @@ export function markdownToHtml(markdown: string) {
     .map((line) => line.replaceAll(/\*(.*?)\*/g, "<strong>$1</strong>"))
     .map((line) => line.replaceAll(/\_(.*?)\_/g, "<em>$1</em>"))
     .map((line) => line.replaceAll(/\[(.*?)\]/g, "<p>$1</p>"))
+    .map((line) =>
+      line.replaceAll(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
+    )
     .join("<br />")
 }
 
