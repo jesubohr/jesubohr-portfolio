@@ -1,56 +1,38 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@layouts/Layout.astro"
 
-import AboutMe from "@/components/AboutMe.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
-import CodeIcon from "@/components/icons/Code.astro"
-import Experience from "@/components/Experience.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import SectionContainer from "@components/SectionContainer.astro"
+import Experience from "@sections/Experience.astro"
+import Projects from "@sections/Projects.astro"
+import AboutMe from "@sections/AboutMe.astro"
+import Hero from "@sections/Hero.astro"
+
+import CodeIcon from "@icons/Code.astro"
+import Briefcase from "@icons/Briefcase.astro"
+import ProfileCheck from "@icons/ProfileCheck.astro"
 ---
 
-<Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
->
+<Layout>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experiencia">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </h2>
-      <Experience />
+      <Hero />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeIcon class="size-7" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
+    <div class="flex flex-col gap-24">
+      <SectionContainer title="Experience" id="experience">
+        <Briefcase slot="icon" class="size-8" />
+        <Experience />
+      </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </h2>
-      <AboutMe />
-    </SectionContainer>
-  </div>
+      <SectionContainer title="Projects" id="projects">
+        <CodeIcon slot="icon" class="size-7" />
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer title="About Me" id="about">
+        <ProfileCheck slot="icon" class="size-8" />
+        <AboutMe />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
