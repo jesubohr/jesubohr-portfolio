@@ -3,9 +3,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@portfolio": ["./portfolio.json"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@components/*": ["./src/components/*"],
+      "@sections/*": ["./src/components/sections/*"],
+      "@icons/*": ["./src/components/icons/*"],
+      "@ui/*": ["./src/components/ui/*"],
     }
   }
 }
