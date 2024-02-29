@@ -1,0 +1,22 @@
+---
+import { markdownToHtml } from "@utils/format"
+import { basics, about } from "@portfolio"
+const { name, aboutImage } = basics
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-purple-700 dark:[&>p>strong]:text-fuchsia-400 [&>p>strong]:font-medium [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    set:html={markdownToHtml(about)}
+  />
+
+  <img
+    width="200"
+    height="200"
+    src={aboutImage}
+    alt={name}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square object-center rounded-2xl bg-black/20 dark:bg-purple-500/5 ring-1 ring-black/70 dark:ring-white/20"
+  />
+</article>
