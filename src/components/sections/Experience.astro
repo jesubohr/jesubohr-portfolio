@@ -1,0 +1,14 @@
+---
+import ExperienceItem from "@components/ExperienceItem.astro"
+import { experience } from "@portfolio"
+---
+
+<ol class="relative mt-8">
+  {
+    experience.map((experience) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
