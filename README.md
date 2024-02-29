@@ -2,6 +2,8 @@
   Jesubohr's Portfolio
 </h1>
 
+![Jesubohr Portfolio](./public/og-image.webp)
+
 A portfoliowebsite for developers, based on the [Portfolio by midudev](https://github.com/midudev/porfolio.dev). It allows you to generate a beautiful portfolio page from a single JSON file. Built with Astro and Tailwind CSS.
 
 ## ✨ Features
@@ -57,7 +59,8 @@ The structure of the JSON file is as follows:
       "startDate": "Jan 2019",
       "title": "Software Developer",
       "company": "Freelance",
-      "description": "Developed web applications using *(insert technologies)*, for diverse projects. Conducted testing and debugging to ensure a *(insert objectives achieved)* for the project."
+      "description": "Developed web applications using *(insert technologies)*, for diverse projects.
+      Conducted testing and debugging to ensure a *(insert objectives achieved)* for the project."
     }
   ],
   "projects": [
