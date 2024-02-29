@@ -1,8 +1,10 @@
 export function markdownToHtml(markdown: string) {
   return markdown
     .split("\n")
-    .map((line) => line.trim().replaceAll(/\*(.*?)\*/g, "<strong>$1</strong>"))
-    .map((line) => line.trim().replaceAll(/\_(.*?)\_/g, "<em>$1</em>"))
+    .map((line) => line.trim())
+    .map((line) => line.replaceAll(/\*(.*?)\*/g, "<strong>$1</strong>"))
+    .map((line) => line.replaceAll(/\_(.*?)\_/g, "<em>$1</em>"))
+    .map((line) => line.replaceAll(/\[(.*?)\]/g, "<p>$1</p>"))
     .join("<br />")
 }
 
