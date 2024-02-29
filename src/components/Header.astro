@@ -1,40 +1,35 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro"
+import ThemeToggle from "@ui/ThemeToggle.astro"
 
 const navItems = [
   {
-    title: "Experiencia",
-    label: "experiencia",
-    url: "/#experiencia",
+    title: "Experience",
+    label: "experience",
+    url: "/#experience"
   },
   {
-    title: "Proyectos",
-    label: "proyectos",
-    url: "/#proyectos",
+    title: "Projects",
+    label: "projects",
+    url: "/#projects"
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
-    url: "/#sobre-mi",
-  },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "mailto:miduga@gmail.com",
-  },
+    title: "About",
+    label: "about",
+    url: "/#about"
+  }
 ]
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center mx-auto mt-2 w-full"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex gap-1 xs:gap-4 px-2.5 xs:px-4 text-[15px] font-medium rounded-full text-neutral-600 dark:text-neutral-100 justify-center items-center"
   >
     {
       navItems.map((link) => (
         <a
-          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="relative block p-2 hover:text-purple-500 dark:hover:text-purple-400 transition"
           aria-label={link.label}
           href={link.url}
         >
@@ -56,9 +51,9 @@ const navItems = [
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+              item.classList.add("text-purple-400")
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-purple-400")
             }
           })
         }
@@ -68,7 +63,7 @@ const navItems = [
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
-      threshold: 0.3,
+      threshold: 0.3
     })
 
     sections.forEach((section) => {
@@ -93,11 +88,19 @@ const navItems = [
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
+    --nav-bg-color: rgba(243, 232, 255, 0.8);
+    --tw-ring-color: rgba(216, 180, 254, 0.4);
+  }
+
+  html.dark nav {
+    --nav-bg-color: rgba(59, 7, 100, 0.1);
+    --tw-ring-color: rgba(216, 180, 254, 0.3);
   }
 
   @keyframes nav-shadown {
     to {
-      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
+      @apply shadow-lg backdrop-blur bg-purple-100/80 ring-2;
+      background-color: var(--nav-bg-color);
     }
   }
 </style>

@@ -3,7 +3,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,ts}"],
   darkMode: "class",
   theme: {
-    extend: {}
+    extend: {
+      screens: {
+        xs: "480px"
+      }
+    }
   },
   plugins: []
 }
