@@ -1,0 +1,38 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Software Developer",
+    "profileImage": "/johndoe-profile.jpg",
+    "aboutImage": "/johndoe-about.jpg",
+    "email": "johndoe@gmail.com",
+    "resume": "https://johndoe-resume.com",
+    "summary": "*Software developer* working on making _good software_.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/johndoe"
+      }
+    ]
+  },
+  "about": "About me section",
+  "experience": [
+    {
+      "startDate": "Jan 2019",
+      "title": "Software Developer",
+      "company": "Freelance",
+      "description": "Developed web applications using *(insert technologies)*, for diverse projects. Conducted testing and debugging to ensure a *(insert objectives achieved)* for the project."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project",
+      "description": "Project description",
+      "image": "/projects/project.jpg",
+      "repository": "https://github.com/johndoe/project",
+      "tags": [
+        "HTML",
+        "JavaScript"
+      ]
+    }
+  ]
+}
