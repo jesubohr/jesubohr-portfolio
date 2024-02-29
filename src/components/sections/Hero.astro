@@ -1,0 +1,57 @@
+---
+import { markdownToHtml } from "@utils/format"
+import Badge from "@components/Badge.astro"
+import SocialPill from "@components/SocialPill.astro"
+import LinkedInIcon from "@icons/LinkedIn.astro"
+import GithubIcon from "@icons/GitHub.astro"
+import MailIcon from "@icons/Mail.astro"
+import CVIcon from "@icons/CV.astro"
+
+import { basics } from "@portfolio"
+const { name, summary, profileImage, email, resume, profiles } = basics
+const LinkedIn = profiles.find((profile) => profile.network === "LinkedIn")?.url
+const GitHub = profiles.find((profile) => profile.network === "GitHub")?.url
+---
+
+<div class="flex flex-col gap-6 max-w-xl">
+  <div class="flex gap-6">
+    <img class="rounded-full shadow-lg size-28" src={profileImage} alt={name} />
+    <a
+      href="https://linkedin.com/in/jesusborrero"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Open to Work</Badge>
+    </a>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h1
+      class="text-gray-800 dark:text-white text-4xl sm:text-5xl tracking-tight font-bold"
+    >
+      Hi, I'm {name}
+    </h1>
+    <p
+      class="text-xl text-gray-800 dark:[&>strong]:text-purple-400 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300"
+      set:html={markdownToHtml(summary)}
+    />
+  </div>
+  <nav class="flex flex-wrap gap-4 mt-2">
+    <SocialPill href={`mailto:${email}`}>
+      <MailIcon class="size-4" />
+      Email
+    </SocialPill>
+    <SocialPill href={GitHub}>
+      <GithubIcon class="size-4" />
+      Github
+    </SocialPill>
+    <SocialPill href={LinkedIn}>
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href={resume}>
+      <CVIcon class="size-4" />
+      Resume
+    </SocialPill>
+  </nav>
+</div>

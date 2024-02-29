@@ -9,6 +9,7 @@
       "@sections/*": ["./src/components/sections/*"],
       "@icons/*": ["./src/components/icons/*"],
       "@ui/*": ["./src/components/ui/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   }
 }
