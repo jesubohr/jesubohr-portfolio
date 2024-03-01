@@ -28,16 +28,17 @@ export function relativeTime(startDateStr: string, endDateStr: string) {
   const rtf = new Intl.RelativeTimeFormat("en", { style: "short" })
   const days = Math.round(diff / (1000 * 60 * 60 * 24))
 
+  console.log(days)
   if (days > 15 && days < 365)
     return rtf
       .format(Math.round(days / 30), "months")
       .replace("in", "")
       .trim()
-  else if (days > 365) {
+  else if (days >= 365) {
     const years = Math.floor(days / 365)
     const months = Math.round((days % 365) / 30)
     const yearsStr = rtf.format(years, "years").replace("in", "").trim()
     const monthsStr = rtf.format(months, "months").replace("in", "").trim()
-    return `${yearsStr} ${monthsStr}`
+    return months > 0 ? `${yearsStr} ${monthsStr}` : yearsStr
   } else return rtf.format(0, "months").replace("in", "").trim()
 }
