@@ -18,7 +18,6 @@ function matchTagIcon(tag: string) {
             <img
               alt={`Screenshot of ${name}`}
               src={image}
-              loading="lazy"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
             />
           </div>
@@ -32,7 +31,7 @@ function matchTagIcon(tag: string) {
             <ul class="flex flex-row mb-2 gap-x-2">
               {tags?.map((tag) => (
                 <li>
-                  <span class="flex gap-1.5 items-center py-1.5 px-3 bg-purple-800/40 border-2 border-purple-400/40 rounded-full text-xs">
+                  <span class="flex gap-1.5 items-center py-1.5 px-3 bg-purple-600/40 border-2 border-purple-400/40 rounded-full text-sm">
                     <img
                       height="16"
                       width="16"
@@ -44,7 +43,7 @@ function matchTagIcon(tag: string) {
               ))}
             </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
+            <div class="mt-2 text-gray-700 dark:text-gray-300">
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
