@@ -5,7 +5,7 @@ import { experience } from "@portfolio"
 
 <ol class="relative mt-8">
   {
-    experience.map((experience) => (
+    experience.toReversed().map((experience) => (
       <li>
         <ExperienceItem {...experience} />
       </li>
