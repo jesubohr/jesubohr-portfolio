@@ -23,16 +23,16 @@
     {
       "company": "Freelance",
       "title": "Frontend Developer",
-      "startDate": "2022-11-02",
-      "endDate": "2023-04-02",
-      "description": "- Development of web applications using technologies such as: HTML5, CSS3, JavaScript (ES6+), ReactJS, Astro, etc., for clients from different sectors.\n- Development of REST APIs using: Node.js, Express.js, OAuth, database design (MongoDB, SQLite), etc., using good web development and security practices.\n- Translating business and user requirements into functional software, ensuring alignment with project goals.\n- Performing testing and debugging to ensure a high quality user interface for the project."
+      "startDate": "2022-08-02",
+      "endDate": "2023-09-02",
+      "description": "- Web application development using technologies such as: HTML5, CSS3, JavaScript (ES6+), ReactJS, Vue3, Sanity CMS, etc., in addition to the ideal handling of APIs needed in a web application.\n- Design and development of a custom website to promote the client's professional image and consulting services, including an SEO optimized blog. This resulted in an increase in lead acquisition during the first few months.\n- Implementation of a new design for a financial services web application, aimed at improving user experience and usability, resulting in a significant increase in satisfaction and greater interaction with the platform's key functionalities."
     },
     {
       "company": "SIP Ingeniería",
       "title": "Full Stack Developer",
       "link": "https://www.linkedin.com/company/sipingenieria/",
-      "startDate": "2023-05-02",
-      "description": "<strong>Financial auditing system for companies with help of AI tools</strong><br/>- Implementation of an automated notification system to alert users about critical events.<br/>- Implementation of two-factor authentication (2FA), to improve system security in user authorization.<br/>- Development of role-based permissions system to ensure user data security.<br/>- Implementation of Dropzone for secure uploading of important files.<br/><br/><strong>AI-based code review system</strong><br/>- Integration of GPT-4 API for analysis and generation of recommendations based on framework standards, architecture and/or conventions used in the company.<br/>- Increased code quality and adherence to best practices and standards by developers.<br/>- Reduced code review time by senior developers by 50%, enabling faster development cycles.<br/>- Project deployment using Docker, ensuring software scalability and portability.<br/>"
+      "startDate": "2023-11-02",
+      "description": "<strong>Financial auditing system for companies with help of AI tools</strong><br/>- Implementation of an automated notification system to alert users about critical events.<br/>- Implementation of two-factor authentication (2FA), to improve system security in user authorization.<br/>- Development of role-based permissions system to ensure hierarchical security.<br/><br/><strong>AI-based code review system</strong><br/>- Integration of GPT-4 API for analysis and generation of recommendations based on framework standards, architecture and/or conventions used in the company.<br/>- Increased code quality and adherence to best practices and standards by developers.<br/>- Reduction of code review time for senior developers by 50%, enabling faster development cycles.<br/>- Project deployment using Docker, ensuring software scalability and portability.<br/>"
     }
   ],
   "projects": [
@@ -41,13 +41,13 @@
       "description": "Personal website for a client who wanted to promote his professional image by offering his consulting services and a blog to share his knowledge.",
       "image": "/projects/jaimegiraldo.jpg",
       "link": "https://jaimegiraldo.co/",
-      "tags": ["Astro", "TailwindCSS"]
+      "tags": ["Astro", "TailwindCSS", "SanityCMS"]
     },
     {
       "name": "Dunor Boutique",
       "description": "Online store selling suits and tailor-made garments for all special occasions, from weddings to degrees.",
       "image": "/projects/dunorboutique.jpg",
-      "link": "https://dunor-boutique.vercel.app/",
+      "link": "https://dunor-boutique-store.vercel.app/",
       "repository": "https://github.com/jesubohr/dunor-boutique",
       "tags": ["Astro", "Preact", "TailwindCSS"]
     },
@@ -73,22 +73,6 @@
       "link": "https://scales2care.live",
       "repository": "https://github.com/jesubohr/scales2care",
       "tags": ["React", "TailwindCSS", "PWA"]
-    },
-    {
-      "name": "Todoist",
-      "description": "An app that allows you to create, check and delete tasks.",
-      "image": "/projects/todoist.jpeg",
-      "link": "https://todoist.jesubohrdev.com",
-      "repository": "https://github.com/jesubohr/ToDoist",
-      "tags": ["React", "CSS Modules", "PWA"]
-    },
-    {
-      "name": "GenPass",
-      "description": "A simple generator of secure passwords for daily use.",
-      "image": "/projects/genpass.jpeg",
-      "link": "https://altgenpass.vercel.app/",
-      "repository": "https://github.com/jesubohr/GenPass",
-      "tags": ["Astro", "Svelte", "TailwindCSS"]
     }
   ]
 }
