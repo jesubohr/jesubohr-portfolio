@@ -5,6 +5,7 @@ import LinkButton from "@components/ui/LinkButton.astro"
 import { projects } from "@portfolio"
 
 function matchTagIcon(tag: string) {
+  if (tag.includes("Next")) return "nextdotjs"
   return tag.split(" ").join("").toLowerCase()
 }
 ---
@@ -36,6 +37,7 @@ function matchTagIcon(tag: string) {
                       height="16"
                       width="16"
                       src={`https://cdn.simpleicons.org/${matchTagIcon(tag)}/black/white`}
+                      alt={`${tag} icon`}
                     />
                     <span>{tag}</span>
                   </span>
