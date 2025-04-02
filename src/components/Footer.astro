@@ -10,20 +10,16 @@ const currentYear = new Date().getFullYear()
   <div
     class="flex flex-wrap items-center justify-between gap-y-3 gap-x-6 mx-auto py-4 px-4 w-full max-w-screen-xl rounded-lg"
   >
-    <span class="text-sm sm:text-center"
-      >© {currentYear}
-      <a href="https://github.com/jesubohr" class="font-semibold hover:underline">jesubohr</a>. Almost all rights reserved.
+    <span class="text-sm sm:text-center">
+      <a href="https://github.com/jesubohr" class="font-semibold hover:underline">jesubohr</a>
+      © {currentYear}
     </span>
-    <ul
-      class="flex items-center gap-4 text-sm font-medium dark:text-white/90"
-    >
+    <ul class="flex items-center gap-4 text-sm font-medium dark:text-white/90">
       <li>
-        <a href="/#about" class="hover:underline">Sobre mí</a>
+        <a href="/#about" class="hover:underline">About me</a>
       </li>
       <li>
-        <a id="contacto" href={`mailto:${email}`} class="hover:underline">
-          Contact
-        </a>
+        <a id="contacto" href={`mailto:${email}`} class="hover:underline">Contact me</a>
       </li>
     </ul>
   </div>
