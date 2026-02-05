@@ -25,21 +25,14 @@
       "title": "Frontend Developer",
       "startDate": "2022-08-02",
       "endDate": "2023-09-02",
-      "description": "- Web application development using technologies such as: HTML5, CSS3, JavaScript (ES6+), React, Angular, TailwindCSS, Sanity CMS, etc., in addition to the ideal handling of APIs needed in a web application.\n- Design and development of a custom website to promote the client's professional image and consulting services, including an SEO optimized blog. This resulted in an increase in lead acquisition during the first few months.\n- Implementation of a new design for a financial services web application, aimed at improving user experience and usability, resulting in a significant increase in satisfaction and greater interaction with the platform's key functionalities."
+      "description": "- Delivered web applications utilizing HTML/CSS/JavaScript (ES6+), or React.js/Typescript/TailwindCSS, ensuring optimal performance and user experience.\n- Development of SEO-optimized landing pages, blogs and e-commerce websites, leading to increased traffic and customer engagement.\n- Implementation of redesign for a financial services application using React.js, enhancing UI/UX and user engagement and satisfaction based on A/B testing results.\n- Integration of RESTful APIs into React.js applications, ensuring efficient data flows and correct communication between frontend and backend services."
     },
     {
       "company": "SIP Ingeniería",
       "title": "Full Stack Developer",
       "link": "https://www.linkedin.com/company/sipingenieria/",
       "startDate": "2023-11-02",
-      "description": "<strong>Financial auditing system for companies with help of AI tools</strong><br/>- Implementation of an automated notification system to alert users about critical events.<br/>- Implementation of two-factor authentication (2FA) in Python server-side, to improve system security in user authorization.<br/>-  Developed system that creates an audit engagement based on documents provided by the company, using AWS services and AI tools.<br/><br/><strong>AI-based code review system</strong><br/>- Integration of GPT API for analysis and generation of recommendations based on framework standards, architecture and/or conventions used in the company.<br/>- Increased code quality and adherence to best practices and standards by developers.<br/>- Reduction of code review time for senior developers by 50%, enabling faster development cycles.<br/><br/>Both projects deployed using Docker, ensuring software scalability and portability."
-    },
-    {
-      "company": "Qollabs",
-      "title": "Software Developer",
-      "link": "https://www.qollabs.dev/",
-      "startDate": "2025-01-02",
-      "description": "I recently joined the team as a Software Developer specialized in Web Development. My focus is on frontend and backend technologies, always ready to contribute to the creation of solutions that bring tangible benefits to users, driving digital transformation in different markets. My main tools are: React, Angular, TailwindCSS, NextJS, PostgreSQL, Python, Typescript, etc., always focused on the best practices of software development."
+      "description": "- Collaboration with audit professionals to develop features for an AI-based financial auditing system, leveraging Python, React, Bootstrap, AWS, OpenAI, etc., to be powerful and efficient.\n- Implementation of two-factor authentication (2FA), RAG Model to chat with uploaded attachments, automatized extraction and analysis of company documents, searching of critical details about a company, and several other functionalities.\n- Provisioning of AI-based insights to auditors for them to decide the next steps or answers to each stage of the audit process of a company's financial state.\n- Development of bespoke app to automate code reviews for internal projects using GPT-4o API, improving adherence to coding standards and reducing review and refactoring time by 50%.\n- Employment of Jenkins/Docker for CI/CD, ensuring scalability and portability across environments."
     }
   ],
   "projects": [
