@@ -1,9 +1,15 @@
-import { defineConfig } from "astro/config"
-import tailwind from "@astrojs/tailwind"
-import robotsTxt from "astro-robots-txt"
+// @ts-check
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://me.jesubohrdev.com",
-  integrations: [tailwind(), robotsTxt()]
-})
+  site: "https://me.jesubohr.dev",
+  integrations: [react(), tailwindcss()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  adapter: netlify(),
+});

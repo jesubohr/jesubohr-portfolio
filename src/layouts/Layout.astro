@@ -1,8 +1,8 @@
 ---
+import "@/styles/global.css"
 import "@fontsource-variable/onest"
-import { ViewTransitions } from "astro:transitions"
-import Header from "@components/Header.astro"
-import Footer from "@components/Footer.astro"
+import Header from "@/components/Header.astro"
+import Footer from "@/components/Footer.astro"
 import { basics } from "@portfolio"
 
 
@@ -20,7 +20,6 @@ const SITE_DESCRIPTION = label
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{SITE_TITLE}</title>
-    <ViewTransitions />
 
     <!-- Open Graph -->
     <meta property="og:title" content={SITE_TITLE} />
