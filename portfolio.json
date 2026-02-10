@@ -2,8 +2,8 @@
   "basics": {
     "name": "Jesús Borrero",
     "label": "Software Developer",
-    "profileImage": "/jesubohr-small.jpg",
-    "aboutImage": "/jesubohr-medium.jpg",
+    "profileImage": "https://avatars.githubusercontent.com/u/39781228?v=4",
+    "aboutImage": "https://avatars.githubusercontent.com/u/39781228?v=4",
     "email": "jesus.borrero.fernandez@gmail.com",
     "resume": "https://resume.jesubohr.dev",
     "summary": "*Software developer* working on great _digital experiences_.\nExperienced in building *websites* that provide users a _seamless experience_.",
@@ -23,16 +23,16 @@
     {
       "company": "Freelance",
       "title": "Frontend Developer",
-      "startDate": "2022-08-02",
+      "startDate": "2022-01-02",
       "endDate": "2023-09-02",
-      "description": "- Delivered web applications utilizing HTML/CSS/JavaScript (ES6+), or React.js/Typescript/TailwindCSS, ensuring optimal performance and user experience.\n- Development of SEO-optimized landing pages, blogs and e-commerce websites, leading to increased traffic and customer engagement.\n- Implementation of redesign for a financial services application using React.js, enhancing UI/UX and user engagement and satisfaction based on A/B testing results.\n- Integration of RESTful APIs into React.js applications, ensuring efficient data flows and correct communication between frontend and backend services."
+      "description": "- Delivered multiple high-performance web applications and landing pages using React, Astro, and TailwindCSS, achieving faster load times and enhanced SEO metrics.\n- Integrated RESTful APIs into Angular applications, ensuring reliable and efficient frontend-backend communication.\n- Conducted A/B testing and performance audits, driving UX improvements and higher user engagement.\n- Managed client communication, translating business requirements into technical deliverables with clear documentation and timelines.\n\nParticipated in the frontend reimplementation of the user dashboard component system for a trading platform after a full product redesign. Refactored and rebuilt critical UI components in React and TypeScript, improving reusability, performance, and maintainability. Collaborated closely with designers and backend engineers to align visual changes and connecting API (through GraphQL), ensuring a seamless transition to the updated interface. Resulted in a cleaner architecture, a 30% reduction in code duplication, and faster iteration for future UI updates."
     },
     {
       "company": "SIP Ingeniería",
       "title": "Full Stack Developer",
       "link": "https://www.linkedin.com/company/sipingenieria/",
       "startDate": "2023-11-02",
-      "description": "- Collaboration with audit professionals to develop features for an AI-based financial auditing system, leveraging Python, React, Bootstrap, AWS, OpenAI, etc., to be powerful and efficient.\n- Implementation of two-factor authentication (2FA), RAG Model to chat with uploaded attachments, automatized extraction and analysis of company documents, searching of critical details about a company, and several other functionalities.\n- Provisioning of AI-based insights to auditors for them to decide the next steps or answers to each stage of the audit process of a company's financial state.\n- Development of bespoke app to automate code reviews for internal projects using GPT-4o API, improving adherence to coding standards and reducing review and refactoring time by 50%.\n- Employment of Jenkins/Docker for CI/CD, ensuring scalability and portability across environments."
+      "description": "- Led the design and implementation of the frontend for an AI-based financial auditing system using React, TypeScript, and TailwindCSS, integrated with GPT models and AWS services.\n- Architected reusable component library, improving UI consistency and reducing feature delivery time by 35%.\n- Implemented secure 2FA, document parsing workflows, and data visualization dashboards for audit teams.\n- Mentored junior developers through code reviews and technical guidance, enhancing overall code quality and maintainability.\n\nOwned the end-to-end frontend architecture and implementation of an AI-driven financial auditing platform, built with React, TypeScript, and TailwindCSS. Collaborated closely with audit professionals and other developers to translate complex workflows into intuitive UI components and complete views. Implemented secure authentication (2FA), document upload workflows, and real-time collaboration modules integrated with GPT APIs and AWS services. Resulted in a robust, maintainable, and scalable frontend platform that accelerated audit reviews and improved user satisfaction across multiple client projects."
     }
   ],
   "projects": [
